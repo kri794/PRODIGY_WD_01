@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative; /* Add position for creating a bottom border */
+}
+
+#navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Push the border below the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Add transition effect for border color */
+}
+
+#navbar a:hover::after {
+    background-color: #ff5733; /* Change border color on hover */
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    background-color: #f0f0f0;
+}
+
+#about {
+    background-color: #e0e0e0;
+}
+
+#services {
+    background-color: #d0d0d0;
+}
+
+#contact {
+    background-color: #c0c0c0;
+}
